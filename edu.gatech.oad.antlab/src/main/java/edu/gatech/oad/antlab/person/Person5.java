@@ -6,7 +6,7 @@ package edu.gatech.oad.antlab.person;
  *  modified string 
  *  
  *  @author Shir Offsey
- *  @version 1.1
+ *  @version 1.2
  */
 public class Person5 {
   /** Holds the persons real name */
