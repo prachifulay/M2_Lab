@@ -31,7 +31,30 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+		private String calc(String input) {
+	  //Person 1 put your implementation here
+		String temp=input;
+		char [] schar=temp.toCharArray();
+		char[] holder=new char[schar.length];
+		char start=0;
+		for(int i=0;i<=schar.length-1;i++){
+			if(i<schar.length-2){
+				holder[i+2]=schar[i];
+			}
+		if(i==schar.length-2){
+			 holder[1]=schar[i];
+		 }
+		 else if(i==schar.length-1){
+			 holder[0]=schar[i];
+		 }
+		}
+		
+		String ftemp=new String();
+		for(int k=0;k<holder.length;++k){
+			ftemp+=holder[k];
+		}
+	  return ftemp;
+	
 	}
 	
 	/**
