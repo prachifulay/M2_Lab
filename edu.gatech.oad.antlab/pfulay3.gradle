@@ -1,7 +1,16 @@
 apply plugin: 'java'
-sourceSets {
-    main.java.srcDirs = ['src\main\java']
-    main.resources.srcDirs = ['src\main\java']
-    test.java.srcDirs = ['tests/java']
-    test.resources.srcDirs = ['tests/resources']
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+//Define the contents of the jar file
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version , 'Main-Class' : 'AntLabMain'
+    }
+}
+
+//Set up a location of repositories so that any needed library dependencies can be downloaded
+repositories {
+    mavenCentral()
 }
