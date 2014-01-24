@@ -12,5 +12,7 @@ jar {
 
 //Set up a location of repositories so that any needed library dependencies can be downloaded
 repositories {
-    mavenCentral()
+     maven {
+        url "https://github.com/prachifulay/M2_Lab"
+    }
 }
