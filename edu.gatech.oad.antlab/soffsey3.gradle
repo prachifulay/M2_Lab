@@ -1,0 +1,19 @@
+apply plugin: 'java'
+sourceCompatibility = 1.7
+version = '1.3'
+
+defaultTasks 'jar'
+
+//Set up location of repositories for any needed dependencies
+repositories {
+	maven {
+		url "https://github.com/prachifulay/M2_Lab.git"
+	}
+}
+
+jar {
+	manifest {
+		attributes 'Title': 'Gradle Build', 'Version': version , 
+'Main-Class': 'AntLabMain'
+	}
+}
