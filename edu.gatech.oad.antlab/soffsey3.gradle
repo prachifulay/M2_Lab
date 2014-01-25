@@ -6,14 +6,19 @@ defaultTasks 'jar'
 
 //Set up location of repositories for any needed dependencies
 repositories {
-	maven {
-		url "https://github.com/prachifulay/M2_Lab.git"
-	}
+        maven {
+                url "https://github.com/prachifulay/M2_Lab.git"
+        }
+}
+
+dependencies {
+        compile group: 'commons-collections', name: 'commons-colelctions', version: '3.2.1'
+testCompile group: 'junit', name: 'junit', version: '4.0'
 }
 
 jar {
-	manifest {
-		attributes 'Title': 'Gradle Build', 'Version': version , 
-'Main-Class': 'AntLabMain'
-	}
+        manifest {
+                attributes 'Implementation-Title': 'Gradle Quickstart', 'Version': version ,
+'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+        }
 }
